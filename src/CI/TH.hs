@@ -12,7 +12,7 @@ import qualified CI.Types                   as Types
 getVendors :: TH.Q TH.Exp
 getVendors = TH.runIO readVendors >>= TH.lift
   where
-    vendorsPath = "res/vendors.json"
+    vendorsPath = "./res/vendors.json"
 
     readVendors :: IO [Types.Vendor]
     readVendors = do
